@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Challenge Creditas</title>
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav-container">
+        <a href="#" title="Creditas">
+          <img
+            class="nav-logo"
+            src="../assets/creditas-logo.png"
+            alt="Creditas"
+          />
+        </a>
+        <a class="nav-link" href="#ajuda" title="Ajuda">Ajuda</a>
+      </nav>
+      <main class="main-container">
+        <section class="section-container">
+          <header>
+            <h1>
+              Realize uma <strong>simulação de crédito</strong> utilizando seu
+              bem como garantia.
+            </h1>
+          </header>
+          <div class="articles-container">
+            <article class="article-form">
+              <form id="form">
+                <div class="fields">
+                  <div class="field">
+                    <label for="warranty">Garantia</label>
+                    <select
+                      class="select"
+                      name="warranty"
+                      id="warranty"
+                      required
+                    >
+                      <option value="vehicle">Veículo</option>
+                      <option value="immobile">Imóvel</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="number-parcel">Número de parcelas</label>
+                    <select
+                      name="number-parcel"
+                      id="number-parcel"
+                      required
+                    ></select>
+                  </div>
+
+                  <div class="field field-range">
+                    <label for="warranty-value">Valor da Garantia</label>
+                    <input
+                      class="input-form"
+                      type="number"
+                      required
+                      name="warranty-value"
+                      id="warranty-value"
+                      value="0"
+                    />
+                    <div class="range">
+                      <input
+                        type="range"
+                        class="slider"
+                        name="warranty-value-range"
+                        id="warranty-value-range"
+                        min="0"
+                        max="0"
+                        step="10"
+                        aria-label="warranty value range"
+                      />
+                      <div class="range-values" id="range-values-warranty">
+                        <span>0</span>
+                        <span>0</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field field-range">
+                    <label for="load-value">Valor do Empréstimo</label>
+                    <input
+                      type="text"
+                      class="input-form"
+                      required
+                      name="load-value"
+                      id="load-value"
+                      value=""
+                    />
+                    <div for="load-value-range" class="range">
+                      <input
+                        class="slider"
+                        type="range"
+                        name="load-value-range"
+                        id="load-value-range"
+                        min="0"
+                        max="0"
+                        step="10"
+                        aria-label="load value range"
+                      />
+                      <div class="range-values" id="range-values-load">
+                        <span>0</span>
+                        <span>0</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="error-message" id="error-message">
+                    <span
+                      >Algum campo está inválido por favor verifique os campos
+                      preeenchidos.</span
+                    >
+                  </div>
+                </div>
+              </form>
+            </article>
+            <div class="arrow-right">
+              <img src="../assets/arrow.png" alt="arrow-right" />
+            </div>
+            <article class="article-result">
+              <div class="result-container">
+                <div class="parcel-container">
+                  <h2>Valor da Parcela</h2>
+                  <div class="parcel">
+                    <strong>R$</strong>
+                    <span id="parcel-value">138,90</span>
+                  </div>
+                </div>
+                <div class="amount-container">
+                  <h2>Total a pagar</h2>
+                  <p id="amount-value">3.333,60</p>
+                </div>
+                <div class="tax-container">
+                  <h2>Taxa de juros (mês)</h2>
+                  <p>2.34%</p>
+                </div>
+                <button class="btn-apply" id="btn-apply">Solicitar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>© 2022 - Creditas Challenge</p>
+      </footer>
+
+      <div class="modal-container" id="modal">
+        <div class="card-modal">
+          <p>
+            Sua solicitação foi envida com sucesso.<br />Entraremos em contato
+            em breve.
+          </p>
+          <button id="close-modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
